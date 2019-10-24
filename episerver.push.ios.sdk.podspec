@@ -23,14 +23,16 @@ which is then fowarded to Episerver Campaign and can be used to send push messag
 to the app.
                        DESC
 
-  s.homepage         = 'https://github.com/episerver/episerver.push.ios.sdk'
+  s.homepage         = 'https://github.com/episerver-berlin/episerver.push.ios.sdk'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
   s.author           = { 'Till Klister' => 'till.klister@episerver.com' }
-  s.source           = { :git => 'https://github.com/episerver/episerver.push.ios.sdk.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/episerver-berlin/episerver.push.ios.sdk.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/episerver'
 
   s.ios.deployment_target = '10.0'
+  
+  s.swift_version = '4.0'
 
   s.source_files = 'episerver.push.ios.sdk/Classes/**/*'
   

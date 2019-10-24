@@ -35,7 +35,7 @@ public class Preferences {
             return UserDefaults.standard.bool(forKey: Preferences.DIRTY)
         }
         set {
-            UserDefaults.standard.set(dirty, forKey: Preferences.DIRTY)
+            UserDefaults.standard.set(newValue, forKey: Preferences.DIRTY)
         }
     }
     
