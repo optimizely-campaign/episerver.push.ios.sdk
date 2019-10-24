@@ -1,0 +1,6 @@
+framework module episerver_push_ios_sdk {
+  umbrella header "episerver.push.ios.sdk-umbrella.h"
+
+  export *
+  module * { export * }
+}
