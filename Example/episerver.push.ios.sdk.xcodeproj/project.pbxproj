@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		349E8D5F2387E33000C3B1C3 /* DownloadImageServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 349E8D582387E33000C3B1C3 /* DownloadImageServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3B8DD3AB6E9A604D9D28223E /* Pods_episerver_push_ios_sdk_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12109F879C4AE7C0AC995CF7 /* Pods_episerver_push_ios_sdk_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -15,8 +16,33 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		349E8D5D2387E33000C3B1C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 349E8D572387E33000C3B1C3;
+			remoteInfo = DownloadImageServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		349E8D602387E33000C3B1C3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				349E8D5F2387E33000C3B1C3 /* DownloadImageServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		12109F879C4AE7C0AC995CF7 /* Pods_episerver_push_ios_sdk_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_episerver_push_ios_sdk_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		349E8D582387E33000C3B1C3 /* DownloadImageServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DownloadImageServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E2611C70DB71185111570B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* episerver.push.ios.sdk_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = episerver.push.ios.sdk_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,6 +58,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		349E8D552387E33000C3B1C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCD1AFB9204008FA782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -67,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD01AFB9204008FA782 /* episerver.push.ios.sdk_Example.app */,
+				349E8D582387E33000C3B1C3 /* DownloadImageServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,6 +148,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		349E8D572387E33000C3B1C3 /* DownloadImageServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 349E8D632387E33000C3B1C3 /* Build configuration list for PBXNativeTarget "DownloadImageServiceExtension" */;
+			buildPhases = (
+				349E8D542387E33000C3B1C3 /* Sources */,
+				349E8D552387E33000C3B1C3 /* Frameworks */,
+				349E8D562387E33000C3B1C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DownloadImageServiceExtension;
+			productName = DownloadImageServiceExtension;
+			productReference = 349E8D582387E33000C3B1C3 /* DownloadImageServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		607FACCF1AFB9204008FA782 /* episerver.push.ios.sdk_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "episerver.push.ios.sdk_Example" */;
@@ -123,10 +174,12 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				D254346F25DCA824E804E4D2 /* [CP] Embed Pods Frameworks */,
+				349E8D602387E33000C3B1C3 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				349E8D5E2387E33000C3B1C3 /* PBXTargetDependency */,
 			);
 			name = episerver.push.ios.sdk_Example;
 			productName = episerver.push.ios.sdk;
@@ -139,10 +192,15 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
+					349E8D572387E33000C3B1C3 = {
+						CreatedOnToolsVersion = 11.2.1;
+						DevelopmentTeam = 277AW569FT;
+						ProvisioningStyle = Automatic;
+					};
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = 277AW569FT;
@@ -165,11 +223,19 @@
 			projectRoot = "";
 			targets = (
 				607FACCF1AFB9204008FA782 /* episerver.push.ios.sdk_Example */,
+				349E8D572387E33000C3B1C3 /* DownloadImageServiceExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		349E8D562387E33000C3B1C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCE1AFB9204008FA782 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -234,6 +300,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		349E8D542387E33000C3B1C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCC1AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,6 +317,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		349E8D5E2387E33000C3B1C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 349E8D572387E33000C3B1C3 /* DownloadImageServiceExtension */;
+			targetProxy = 349E8D5D2387E33000C3B1C3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
@@ -265,6 +346,61 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		349E8D612387E33000C3B1C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 277AW569FT;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = DownloadImageServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.episerver-push-ios-sdk-Example.DownloadImageServiceExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		349E8D622387E33000C3B1C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 277AW569FT;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = DownloadImageServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.episerver-push-ios-sdk-Example.DownloadImageServiceExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		607FACED1AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -403,6 +539,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		349E8D632387E33000C3B1C3 /* Build configuration list for PBXNativeTarget "DownloadImageServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				349E8D612387E33000C3B1C3 /* Debug */,
+				349E8D622387E33000C3B1C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "episerver.push.ios.sdk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

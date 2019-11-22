@@ -31,6 +31,7 @@ public class PushMessage: CustomStringConvertible {
     public let id: String
     public let title: String
     public let body: String
+    public let image: String?
     public let trackingUrl: String
     public let description: String
     var openSuccessfullyTracked: Bool = false
@@ -42,6 +43,7 @@ public class PushMessage: CustomStringConvertible {
         let alert = aps["alert"] as! Dictionary<String, Any>
         self.title = alert["title"] as! String
         self.body = alert["body"] as! String
+        self.image = alert["image"] as? String
         self.trackingUrl = data["bm_tracking_url"] as! String
         self.description = "PushMessage(id=\"\(self.id)\",title=\"\(self.title)\",body=\"\(self.body)\")"
     }
