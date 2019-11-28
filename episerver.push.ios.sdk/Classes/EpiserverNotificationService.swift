@@ -20,26 +20,24 @@ import UserNotifications
 open class EpiserverNotificationService: UNNotificationServiceExtension {
 
     var contentHandler: ((UNNotificationContent) -> Void)?
-    var bestAttemptContent: UNMutableNotificationContent?
+    var notificationContent: UNMutableNotificationContent?
 
     public override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
         self.contentHandler = contentHandler
-        bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
-        if let bestAttemptContent = bestAttemptContent,
+        notificationContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
+        if let notificationContent = notificationContent,
             let imageUrlAsString = request.content.userInfo["image"] as? String,
             let imageUrl = URL(string: imageUrlAsString),
             let attachment = try? UNNotificationAttachment(imageUrl: imageUrl) {
-                bestAttemptContent.attachments = [attachment];
-                contentHandler(bestAttemptContent)
+                notificationContent.attachments = [attachment];
+                contentHandler(notificationContent)
         }
     }
     
     public override func serviceExtensionTimeWillExpire() {
-        // Called just before the extension will be terminated by the system.
-        // Use this as an opportunity to deliver your "best attempt" at modified content, otherwise the original push payload will be used.
         if let contentHandler = contentHandler,
-            let bestAttemptContent =  bestAttemptContent {
-            contentHandler(bestAttemptContent)
+            let notificationContent = notificationContent {
+            contentHandler(notificationContent)
         }
     }
 }
@@ -52,7 +50,7 @@ extension UNNotificationAttachment {
             .appendingPathComponent("NotificationAttachment", isDirectory: true)
             .appendingPathComponent(ProcessInfo.processInfo.globallyUniqueString, isDirectory: true);
         try FileManager.default.createDirectory(at: tempDirectory, withIntermediateDirectories: true, attributes: nil)
-        let fileName = UUID().uuidString + ".png" // png seems to work for png and jpg files
+        let fileName = UUID().uuidString + ".png" // seems like some image extension is required for this to work, although the actual extension does not matter
         let tempFile = tempDirectory.appendingPathComponent(fileName)
         try data.write(to: tempFile)
         try self.init(identifier: fileName, url: tempFile, options: nil)
