@@ -1,5 +1,7 @@
 # episerver.push.ios.sdk
 
+This project is based on https://github.com/firebase/quickstart-ios/tree/master/messaging/
+
 [![Version](https://img.shields.io/cocoapods/v/episerver.push.ios.sdk.svg?style=flat)](https://cocoapods.org/pods/episerver.push.ios.sdk)
 [![License](https://img.shields.io/cocoapods/l/episerver.push.ios.sdk.svg?style=flat)](https://cocoapods.org/pods/episerver.push.ios.sdk)
 [![Platform](https://img.shields.io/cocoapods/p/episerver.push.ios.sdk.svg?style=flat)](https://cocoapods.org/pods/episerver.push.ios.sdk)
@@ -26,12 +28,6 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'episerver.push.ios.sdk'
 ```
-
-## Author
-
-Till Klister, till.klister@episerver.com
-
-This project is based on https://github.com/firebase/quickstart-ios/tree/master/messaging/
 
 ## License
 
